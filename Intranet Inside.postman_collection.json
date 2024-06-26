@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "36b4bdfe-e018-4b14-abba-947260930bb3",
+		"name": "Intranet Inside",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27642392"
+	},
+	"item": [
+		{
+			"name": "FetchAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/users",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Service Web Dev - Paginate - Sort by first name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/users?per_page=10&sort_by=first_name&order=asc&service=IT",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "per_page",
+							"value": "10"
+						},
+						{
+							"key": "sort_by",
+							"value": "first_name"
+						},
+						{
+							"key": "order",
+							"value": "asc"
+						},
+						{
+							"key": "service",
+							"value": "IT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user 14",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"TP\",\r\n    \"email\": \"tomp@orus.com\",\r\n    \"first_name\": \"Tom\",\r\n    \"last_name\": \"P\",\r\n    \"position\": \"Developer\",\r\n    \"is_active\": true,\r\n    \"services\": [1, 2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/users/14",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user 15",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/users/15",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"15"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
